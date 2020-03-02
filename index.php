@@ -14,7 +14,9 @@ use Monolog\Handler\StreamHandler;
 
 // create a log channel
 $log = new Logger('myLogChannel');
-$log->pushHandler(new StreamHandler('logger.log', Logger::DEBUG));
+$log->pushHandler(new StreamHandler('Logs/info.log', Logger::INFO));
+
+
 
 
 // add records to the log
