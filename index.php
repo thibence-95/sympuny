@@ -14,7 +14,18 @@ use Monolog\Handler\StreamHandler;
 
 // create a log channel
 $log = new Logger('myLogChannel');
-$log->pushHandler(new StreamHandler('Logs/info.log', Logger::INFO));
+
+switch ($_GET['type']) {
+    case "DEBUG":
+        $log->pushHandler(new StreamHandler('Logs/debug.log', Logger::DEBUG));
+        break;
+    case "INFO":
+        $log->pushHandler(new StreamHandler('Logs/info.log', Logger::INFO));
+        break;
+    case 2:
+        echo "i equals 2";
+        break;
+}
 
 
 
