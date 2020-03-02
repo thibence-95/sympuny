@@ -1,0 +1,4 @@
+[2020-03-02T14:41:26.719174+01:00] myLogChannel.WARNING: Foo [] []
+[2020-03-02T14:41:26.720921+01:00] myLogChannel.ERROR: Bar [] []
+[2020-03-02T14:41:51.668053+01:00] myLogChannel.WARNING: Foo [] []
+[2020-03-02T14:41:51.668557+01:00] myLogChannel.ERROR: Bar [] []
