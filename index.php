@@ -17,13 +17,28 @@ $log = new Logger('myLogChannel');
 
 switch ($_GET['type']) {
     case "DEBUG":
-        $log->pushHandler(new StreamHandler('Logs/debug.log', Logger::DEBUG));
+        $log->pushHandler(new StreamHandler('Logs/info.log', Logger::DEBUG));
         break;
     case "INFO":
         $log->pushHandler(new StreamHandler('Logs/info.log', Logger::INFO));
         break;
-    case 2:
-        echo "i equals 2";
+    case "NOTICE":
+        $log->pushHandler(new StreamHandler('Logs/info.log', Logger::NOTICE));
+        break;
+    case "WARNING":
+        $log->pushHandler(new StreamHandler('Logs/warning.log', Logger::WARNING));
+        break;
+    case "ERROR":
+        $log->pushHandler(new StreamHandler('Logs/warning.log', Logger::ERROR));
+        break;
+    case "CRITICAL":
+        $log->pushHandler(new StreamHandler('Logs/warning.log', Logger::CRITICAL));
+        break;
+    case "ALERT":
+        $log->pushHandler(new StreamHandler('Logs/warning.log', Logger::ALERT));
+        break;
+    case "EMERGENCY":
+        $log->pushHandler(new StreamHandler('Logs/emergency.log', Logger::EMERGENCY));
         break;
 }
 
